@@ -13,12 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url, include
-from django.contrib import admin
+from django.conf.urls import url
+from . import views
 
-#Two include patterns for /blog/ or localhost:8000
 urlpatterns = [
-    url(r'^', include('blog.urls')),
-    url(r'^admin/', admin.site.urls),
-    url(r'^blog/', include('blog.urls'))
+    #take to some view or skip view compnent and use ListView
+    url(r'^$', views.index, name='index')
 ]
