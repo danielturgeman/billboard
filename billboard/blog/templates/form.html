@@ -1,0 +1,33 @@
+{% extends "header.html" %}
+
+{% block content %}
+
+{% for post in posts %}
+    <div class="post">
+        <div class="date">
+            {{post.date| date:"d/m/Y"}}
+        </div>
+        <div class="title">
+            {{post.title}}
+        </div>
+        <div class="body">
+            {{post.body}}
+        </div>
+        <div class="author">
+            {{post.author}}
+        </div>
+    </div>
+{% endfor %}
+{% endblock %}
+
+{% block form-content %}
+    <a href="{% url 'index' %}" class="top-menu"><span class="glyphicon glyphicon-minus"></span></a>
+
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+</button>
+        <button type="reset" class="reset btn btn-default"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+</button>
+    </form>
+{% endblock %}

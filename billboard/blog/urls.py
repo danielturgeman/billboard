@@ -18,5 +18,8 @@ from . import views
 
 urlpatterns = [
     #take to some view or skip view compnent and use ListView
-    url(r'^$', views.index, name='index')
+    #cant use same url regex pattern for different views
+    #url(r'^$', views.post_new, name='post_new'),
+    url(r'^$', views.index, name='index'),
+    url(r'^post/$', views.post_new, name='post_new')
 ]

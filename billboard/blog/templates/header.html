@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pizza Store ITC</title>
+{% load staticfiles %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="{% static 'js/blog.js' %}"></script>
+<link href="{% static 'css/blog.css' %}" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Anton|Pinyon+Script|Poiret+One" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Billboard</h1>
+    </div>
+
+<div class="posts">
+
+    <!-- dynamically create individual posts with titles texts authors dates in border
+    for each post we will wrap a post div and then title, author ..-->
+    {% block content %}
+
+    {% endblock %}
+
+</div>
+
+
+<div class="form">
+
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+
+    {% block form-content %}
+
+    {% endblock %}
+
+
+</div>
+
+</div>
+
+</body>
+</html>

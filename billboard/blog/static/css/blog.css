@@ -1,0 +1,48 @@
+.container {
+    text-align: center;
+}
+
+.header h1{
+    font-family: 'Anton', sans-serif;
+    font-size: 40px;
+    color: black
+}
+
+.posts .post{
+    border: 1px solid #00b7ef;
+    padding: 5px;
+    margin: 10px 50px;
+}
+
+.post .date{
+    font-family: 'Poiret One', cursive;
+    font-size: 16px;
+    color: black
+}
+
+.post .title{
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    color: #00b7ef;
+    text-align: left;
+    padding: 10px;
+}
+
+.post .body{
+    font: 'arial';
+    font-size: 16px;
+    color: #c1bfc0;
+    text-align: left;
+    padding: 10px;
+}
+
+.post .author{
+    text-align: right;
+    font-size: 24px;
+    color: black;
+    font-family: 'Pinyon Script', cursive;
+
+}
+
+
+
